@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "558603362170",
+    "firebase_url": "https://vi-iot-jaideep.firebaseio.com",
+    "project_id": "vi-iot-jaideep",
+    "storage_bucket": "vi-iot-jaideep.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558603362170:android:c5988cb5b4f6b309d980c3",
+        "android_client_info": {
+          "package_name": "com.example.vi_iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558603362170-40pn6mdgtnjmggf690mr44n9b2mm3n8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrKY9_Xjfd4EOEqO0mXm9MwqxHV6kUBDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558603362170-40pn6mdgtnjmggf690mr44n9b2mm3n8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
