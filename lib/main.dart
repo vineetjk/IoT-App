@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'con IoT ',
+      title: 'IoT ',
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     
+    
     return Scaffold(
       appBar: AppBar(
         
@@ -64,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Table(
         children: [
+          
           TableRow(
 
            children:[
@@ -76,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       children : <Widget>[
 
-                      Icon(Icons.lightbulb_outline,size: 60.0,color: _colbulb,),
+                      Icon(Icons.lightbulb_outline,size: 60.0, color: _colbulb,),
 
                       Text("Hall Light",),
 
@@ -288,7 +290,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.purple,
                       
                       onPressed:(){
-                      
+                        _showDialog("Settings","Comming soon...!","hmm!","hm hm..!");
+
                       },
                       ),
 
@@ -390,13 +393,32 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void writeData(int a){
-    int b = a;
-    dbRef.child("/").update({
-
-      'patternID' : b
-
-
-    });
+  void _showDialog(String title, String body , String action1, String action2) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("$title"),
+          content: new Text("$body"),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("$action1"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            FlatButton(
+              child: new Text("$action2"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 }
